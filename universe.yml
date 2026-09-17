@@ -73,7 +73,7 @@ services:
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 10
+      start_period: 10s
     networks:
       - sag-universe  
 
@@ -104,6 +104,5 @@ services:
       - sag-universe
 
 networks:
-  default:
-    external:
-      name: sag-universe
+  sag-universe:
+    external: true

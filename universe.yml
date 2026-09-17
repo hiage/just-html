@@ -1,0 +1,109 @@
+services:
+  demo-corporate:
+    container_name: demo-corporate
+    image: hiage/page-corporate:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - sag-universe
+
+  demo-customer:
+    container_name: demo-customer
+    image: hiage/page-customer:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - sag-universe
+
+  demo-eproc:
+    container_name: demo-eproc
+    image: hiage/page-eproc:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - sag-universe
+
+  demo-employee:
+    container_name: demo-employee
+    image: hiage/page-employee:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - sag-universe
+
+  demo-erp:
+    container_name: demo-erp
+    image: hiage/page-erp:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - sag-universe
+
+  demo-vendor:
+    container_name: demo-vendor
+    image: hiage/page-vendor:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10
+    networks:
+      - sag-universe  
+
+  demo-payment:
+    container_name: demo-payment
+    image: hiage/page-payment:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - sag-universe
+
+  demo-company-profile:
+    container_name: demo-company-profile
+    image: hiage/page-company-profile:latest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - sag-universe
+
+networks:
+  default:
+    external:
+      name: sag-universe

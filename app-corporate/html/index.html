@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Corporate Services login" />
+    <title>Corporate Services</title>
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body class="corporate-page">
+    <header class="masthead">
+      <div class="brand">
+        <img src="assets/mark.svg" alt="Example Corporation" />
+        <span>Example Corporation</span>
+      </div>
+      <div class="header-tag">Operations access</div>
+    </header>
+
+    <main class="auth-shell">
+      <aside class="overview-panel" aria-label="Corporate services overview">
+        <p class="eyebrow">Business operations</p>
+        <h2>Secure access for critical services</h2>
+        <p class="overview-copy">Support finance, procurement, workforce and governance functions through a controlled access environment.</p>
+
+        <ul class="service-list">
+          <li>Finance and controls</li>
+          <li>Procurement workflows</li>
+          <li>People operations</li>
+        </ul>
+
+        <div class="status-pill" aria-label="Service status">
+          <span class="status-dot"></span>
+          Monitoring active
+        </div>
+      </aside>
+
+      <section class="form-panel" aria-label="Corporate Services login form">
+        <div class="panel-head">
+          <span class="title-tag">Corporate Services</span>
+          <span class="panel-meta">Authorized access</span>
+        </div>
+
+        <div id="inline-status" class="inline-status" aria-live="polite"></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">User ID</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+              <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+            </div>
+          </div>
+
+          <button type="submit" class="primary-button">Sign In</button>
+          <a href="#" class="text-link" data-help="recovery">Need help signing in?</a>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer-bar">© 2026 Example Corporation</footer>
+
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

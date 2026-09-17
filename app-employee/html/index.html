@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Employee Portal login" />
+    <title>Employee Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="employee-page">
+    <header class="employee-header">
+      <div class="inner employee-inner">
+        <div class="brand">
+          <img src="assets/mark.svg" alt="Example Corporation" />
+          <span>Example Corporation</span>
+        </div>
+        <div class="header-tag">Internal</div>
+      </div>
+    </header>
+
+    <main class="workspace inner">
+      <aside class="services-sidebar" aria-label="Employee services">
+        <p class="eyebrow">Employee services</p>
+        <h1>Employee Portal</h1>
+        <nav class="service-list" aria-label="Employee links">
+          <a href="#">Leave</a>
+          <a href="#">Payroll</a>
+          <a href="#">Benefits</a>
+          <a href="#">Directory</a>
+        </nav>
+      </aside>
+
+      <section class="auth-panel" aria-label="Employee Portal login form">
+        <div class="panel-head">
+          <span class="title-tag">Sign in</span>
+          <span class="panel-meta">HR access</span>
+        </div>
+
+        <div id="inline-status" class="inline-status" aria-live="polite"></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">Employee ID</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+              <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+            </div>
+          </div>
+          <button type="submit" class="primary-button">Sign In</button>
+          <a href="#" class="text-link" data-help="recovery">Need help signing in?</a>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner footer-inner">
+        <span>© 2026 Example Corporation</span>
+        <span>Employee services</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

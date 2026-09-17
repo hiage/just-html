@@ -1,0 +1,172 @@
+
+:root {
+  --bg: #edf1f3;
+  --panel: #ffffff;
+  --line: #d5dbe1;
+  --text: #1c2932;
+  --muted: #5a6977;
+  --navy: #283d4d;
+  --navy-soft: #edf3f7;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+.inner { width: min(1040px, calc(100% - 28px)); margin: 0 auto; }
+.erp-header {
+  background: #243642;
+  color: #fff;
+}
+.erp-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+.brand img { width: 26px; height: 26px; }
+.app-name {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.erp-shell {
+  min-height: calc(100vh - 140px);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 0;
+  align-items: center;
+  padding: 28px 0 20px;
+}
+.system-panel {
+  padding-right: 16px;
+}
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  font-weight: 700;
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.login-panel {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--line);
+  padding: 20px 18px;
+}
+.inline-status {
+  min-height: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.inline-status.is-error { color: #7c2d12; }
+.inline-status.is-success { color: #1f4d36; }
+form { display: grid; gap: 18px; }
+.field-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+label {
+  font-size: 13px;
+  font-weight: 600;
+}
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 38px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  padding: 0 12px;
+  border-radius: 0;
+}
+input:focus {
+  outline: 2px solid var(--navy);
+  outline-offset: 1px;
+}
+.password-wrap {
+  position: relative;
+}
+.password-wrap input { padding-right: 56px; }
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 6px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 2px;
+}
+.primary-button {
+  min-width: 150px;
+  min-height: 38px;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0;
+}
+.primary-button:hover,
+.primary-button:focus-visible {
+  background: #1d2f3e;
+}
+.text-link {
+  font-size: 13px;
+  color: var(--navy);
+}
+.erp-footer {
+  border-top: 1px solid var(--line);
+  background: #f9fafb;
+  text-align: center;
+  padding: 14px 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+@media (max-width: 760px) {
+  .erp-shell {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .system-panel { padding-right: 0; }
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .erp-inner { padding: 12px 0; }
+}

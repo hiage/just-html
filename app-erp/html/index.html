@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ERP login" />
+    <title>Enterprise Resource Planning</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="erp-page">
+    <header class="erp-header">
+      <div class="inner erp-inner">
+        <div class="brand">
+          <img src="assets/mark.svg" alt="Example Corporation" />
+          <span>Example Corporation</span>
+        </div>
+        <span class="app-name">ERP</span>
+      </div>
+    </header>
+
+    <main class="erp-shell inner">
+      <section class="system-panel">
+        <p class="eyebrow">Operations access</p>
+        <h1>System sign in</h1>
+      </section>
+
+      <section class="login-panel" aria-label="ERP login form">
+        <div id="inline-status" class="inline-status" aria-live="polite"></div>
+        <form id="login-form" novalidate>
+          <div class="field-row">
+            <label for="username">User name</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </div>
+          <div class="field-row">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+              <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="submit" class="primary-button">Sign In</button>
+            <a href="#" class="text-link" data-help="recovery">Password assistance</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="erp-footer">Authorized users only</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Corporate Payments operator access" />
+    <title>Corporate Payments</title>
+    <link rel="stylesheet" href="styles.css?v=business-payments" />
+  </head>
+  <body class="payment-page">
+    <header class="payment-header">
+      <div class="inner payment-inner">
+        <div class="brand">
+          <img src="assets/mark.svg" alt="Example Corporation" />
+          <span>
+            <strong>Example Corporation</strong>
+            <small>Corporate Payments</small>
+          </span>
+        </div>
+        <div class="header-tools">
+          <span class="language-tag">ID</span>
+          <a href="#support">Help &amp; support</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="payment-shell inner">
+      <div class="workspace-panel">
+        <section class="service-stack">
+          <p class="eyebrow">Corporate payment control</p>
+          <h1>Manage business payments with confidence.</h1>
+          <p class="service-copy">A secure workspace for preparing, reviewing, and monitoring authorized payment activity.</p>
+          <div class="service-links" aria-label="Payment service areas">
+            <a href="#">Payment preparation <span>›</span></a>
+            <a href="#">Approval queue <span>›</span></a>
+            <a href="#">Settlement monitoring <span>›</span></a>
+          </div>
+          <div class="security-note">
+            <strong>Security reminder</strong>
+            <span>Never share your password or response key with anyone.</span>
+          </div>
+        </section>
+
+        <section class="login-panel" aria-label="Payment Management login form">
+          <div class="panel-head">
+            <div>
+              <span class="title-tag">Operator access</span>
+              <h2>Welcome back</h2>
+            </div>
+            <span class="panel-meta">Secure sign in</span>
+          </div>
+
+          <div id="inline-status" class="inline-status" aria-live="polite"></div>
+
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="username">Corporate ID / User ID</label>
+              <input id="username" name="username" type="text" autocomplete="username" required />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="password-wrap">
+                <input id="password" name="password" type="password" autocomplete="current-password" required />
+                <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+              </div>
+            </div>
+            <button type="submit" class="primary-button">Sign in securely</button>
+            <div class="form-links">
+              <a href="#" class="text-link" data-help="recovery">Forgot User ID or password?</a>
+              <a href="#support" class="text-link">Contact support</a>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner footer-inner">
+        <span>© 2026 Example Corporation</span>
+        <span id="support">Authorized operator access · Privacy · Terms</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

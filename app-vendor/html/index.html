@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vendor Management System login" />
+    <title>Vendor Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="vendor-page">
+    <header class="vendor-header">
+      <div class="inner header-inner">
+        <div class="brand">
+          <img src="assets/mark.svg" alt="Example Corporation" />
+          <span>Example Corporation</span>
+        </div>
+        <span class="header-tag">Supplier access</span>
+      </div>
+    </header>
+
+    <main class="vendor-shell inner">
+      <div class="vendor-frame">
+        <aside class="info-panel">
+          <p class="eyebrow">Business partners</p>
+          <h1>Vendor Management System</h1>
+          <p>Registered suppliers and business partners can access procurement records and vendor operations.</p>
+          <div class="info-box">
+            <strong>Access note</strong>
+            <span>Registration is managed through the procurement process.</span>
+          </div>
+        </aside>
+
+        <section class="login-panel" aria-label="Vendor Management System login form">
+          <div class="panel-head">
+            <span class="title-tag">Vendor sign in</span>
+          </div>
+
+          <div id="inline-status" class="inline-status" aria-live="polite"></div>
+
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="username">Vendor ID or Email</label>
+              <input id="username" name="username" type="text" autocomplete="username" required />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="password-wrap">
+                <input id="password" name="password" type="password" autocomplete="current-password" required />
+                <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+              </div>
+            </div>
+            <button type="submit" class="primary-button">Sign In</button>
+            <a href="#" class="text-link" data-help="recovery">Account access help</a>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner footer-inner">
+        <span>© 2026 Example Corporation</span>
+        <span>Supplier operations</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

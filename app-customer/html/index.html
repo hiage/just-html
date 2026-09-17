@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Customer Portal login" />
+    <title>Customer Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="customer-page">
+    <header class="topbar">
+      <div class="inner">
+        <div class="brand">
+          <img src="assets/mark.svg" alt="Example Corporation" />
+          <span>Example Corporation</span>
+        </div>
+        <nav class="utility-nav" aria-label="Customer navigation">
+          <a href="#">Support</a>
+          <a href="#">Services</a>
+          <a href="#">Account</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="portal-shell">
+      <aside class="visual-panel" aria-label="Customer services image">
+        <svg viewBox="0 0 640 500" role="img" aria-label="Service center illustration" class="scene-art" preserveAspectRatio="xMidYMid meet">
+          <rect width="640" height="500" fill="#e7edf1"/>
+          <rect x="42" y="70" width="300" height="316" fill="#dfe8ee"/>
+          <rect x="72" y="103" width="240" height="238" fill="#f8fafb"/>
+          <rect x="102" y="140" width="180" height="18" fill="#afbfc9"/>
+          <rect x="102" y="178" width="122" height="14" fill="#c7d0d8"/>
+          <rect x="102" y="206" width="146" height="14" fill="#c7d0d8"/>
+          <rect x="102" y="246" width="85" height="72" fill="#d5dde4"/>
+          <rect x="205" y="246" width="99" height="72" fill="#c3ced9"/>
+          <rect x="390" y="98" width="192" height="242" fill="#f9fbfc" stroke="#bfc9d1"/>
+          <rect x="424" y="132" width="126" height="12" fill="#a7b5c2"/>
+          <rect x="424" y="160" width="104" height="12" fill="#c5ced5"/>
+          <rect x="424" y="188" width="112" height="12" fill="#c5ced5"/>
+          <rect x="424" y="226" width="93" height="76" fill="#d7e0e8"/>
+          <circle cx="512" cy="264" r="14" fill="#aebec9"/>
+          <rect x="96" y="366" width="260" height="20" fill="#cad5dd"/>
+          <rect x="385" y="370" width="170" height="20" fill="#cad5dd"/>
+        </svg>
+      </aside>
+
+      <section class="form-panel" aria-label="Customer Portal login">
+        <p class="eyebrow">Customer services</p>
+        <h1>Customer Portal</h1>
+
+        <div id="inline-status" class="inline-status" aria-live="polite"></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">Email or Customer ID</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+              <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+            </div>
+          </div>
+          <button type="submit" class="primary-button">Sign In</button>
+          <a href="#" class="text-link" data-help="recovery">Need help signing in?</a>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="inner footer-inner">
+        <span>Customer services</span>
+        <span>Privacy</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="e-Procurement login" />
+    <title>e-Procurement</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="eproc-page">
+    <header class="proc-header">
+      <div class="inner header-inner">
+        <div class="brand">Example Corporation</div>
+        <div class="application-name">e-Procurement</div>
+      </div>
+    </header>
+
+    <main class="proc-shell inner">
+      <section class="notice-panel">
+        <p class="eyebrow">Supplier access</p>
+        <h1>Procurement Access</h1>
+        <p>Access is provided to registered procurement personnel and suppliers.</p>
+        <ul>
+          <li>Purchase requests</li>
+          <li>Supplier records</li>
+          <li>Procurement review</li>
+        </ul>
+      </section>
+
+      <section class="login-panel" aria-label="e-Procurement login form">
+        <div class="panel-head">
+          <span class="title-tag">Sign in</span>
+          <span class="panel-meta">Authorized access</span>
+        </div>
+
+        <div id="inline-status" class="inline-status" aria-live="polite"></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">User ID</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+              <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+            </div>
+          </div>
+          <button type="submit" class="primary-button">Sign In</button>
+          <a href="#" class="text-link" data-help="recovery">Need assistance?</a>
+        </form>
+      </section>
+    </main>
+
+    <footer class="proc-footer">
+      <div class="inner footer-inner">
+        <span>Terms of use</span>
+        <span>Procurement information</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

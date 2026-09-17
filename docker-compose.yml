@@ -1,0 +1,120 @@
+services:
+  corporate:
+    build:
+      context: ./app-corporate
+    container_name: example-corporate
+    image: hiage/page-corporate:latest
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  customer:
+    build:
+      context: ./app-customer
+    container_name: example-customer
+    image: hiage/page-customer:latest
+    ports:
+      - "3001:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  eproc:
+    build:
+      context: ./app-eproc
+    container_name: example-eproc
+    image: hiage/page-eproc:latest
+    ports:
+      - "3002:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  employee:
+    build:
+      context: ./app-employee
+    container_name: example-employee
+    image: hiage/page-employee:latest
+    ports:
+      - "3003:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  erp:
+    build:
+      context: ./app-erp
+    container_name: example-erp
+    image: hiage/page-erp:latest
+    ports:
+      - "3004:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  vendor:
+    build:
+      context: ./app-vendor
+    container_name: example-vendor
+    image: hiage/page-vendor:latest
+    ports:
+      - "3005:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  payment:
+    build:
+      context: ./app-payment
+    container_name: example-payment
+    image: hiage/page-payment:latest
+    ports:
+      - "3006:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  company-profile:
+    build:
+      context: ./company-profile
+    container_name: example-company-profile
+    image: hiage/page-company-profile:latest
+    ports:
+      - "3010:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
